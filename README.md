@@ -75,3 +75,10 @@ User has to assign the protoocol nnumber corresponds to linux kernel subsystem w
 
 NL protocol numbers can be verified in linux/netlink.h
 We will be assigning a new protocl number 31 for our project.
+
+When kernelspace recieves data from USA via netlink, it is recieved in a data structure called socket buffer sk_buff.
+Kernel uses this data structures for various purposes.
+1. Transferring msg from one kernel subsystem to another.
+2. recieving network packet.
+3. Packet movement from one layer of TCP/IP stack to another.
+
