@@ -56,6 +56,7 @@ static void netlink_recv_msg_fn(struct sk_buff *skb_in) {
 			printk(KERN_INFO "Error sending a reply to userspace\n");
 			kfree_skb(skb_out);
 		}
+		printk(KERN_INFO "Kernel has sent the acknowledgment back to user process: %u\n", us_process_port_id);
 	}
 }
 

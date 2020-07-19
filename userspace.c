@@ -76,7 +76,7 @@ _kernel_data_reciever_thread(void *arg) {
 			NLMSG_HDRLEN + NLMSG_SPACE(MAX_PAYLOAD));
 
 	do {	
-		memset(&nlh_recv, 0, NLMSG_HDRLEN + NLMSG_SPACE(MAX_PAYLOAD));
+		memset(nlh_recv, 0, NLMSG_HDRLEN + NLMSG_SPACE(MAX_PAYLOAD));
 		memset(&outermsghdr, 0, sizeof(struct msghdr));
 	
 		iov.iov_base = (void *)nlh_recv;
